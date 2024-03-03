@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Car racing</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+        <script>
+            window.console = window.console || function(t) {}
+        </script>
+        <script>
+            if (document.location.search.match(/type=embed/gi)) {
+                window.parent.postMessage('resize', '*')
+            }
+        </script>
+    </head>
+    <body>
+        <div id="screen">
+            <div id="road">
+                <div id="sky">
+                
+                </div>
+                <div id="hero">
+
+                </div>
+            </div>
+            <div id="hud">
+                <span id="time" class="panel">0</span>
+                <span id="score" class="panel">0</span>
+                <span id="lap" class="panel">0'00"000</span>
+                <span id="tacho" class="panel">0</span>
+            </div>
+            <div id="home">
+                <h1>Dashboard</h1>
+                <p id="text"></p>
+                <div id="highscore"></div>
+            </div>
+        </div>
+        <div id="controls">
+            <span><span>C</span>Insert Coin</span>
+            <span><span>M</span>Mute</span>
+            <span><span>&lt;</span><span>&gt;</span>Accelerate</span>
+            <span><span>&lt;</span><span>&gt;</span>Move</span>
+        </div>
+        <script src="javascript/1.js"></script>
+        <script id="rendered-js">
+            const ASSETS = {
+                COLOR: {
+                    TAR: ["#959298", "#9c9a9d"],
+                    RUMBLE: ["#959298", "#f5f2f6"],
+                    GRASS: ["#eedccd", "#e6d4c5"],
+                },
+                IMAGE: {
+                    TREE: {
+                        src: "images/tree.png",
+                        width: 132,
+                        height: 192,
+                    },
+
+                    HERO: {
+                        src: "images/hero.png",
+                        width: 110,
+                        height: 56,
+                    },
+
+                    CAR: {
+                        src: "images/car04.png",
+                        width: 50,
+                        height: 36,
+                    },
+
+                    FINISH: {
+                        src: "images/finish.png",
+                        width: 339,
+                        height: 180,
+                        offset: -0.5,
+                    },
+
+                    SKY: {
+                        src: "images/cloud.jpg",
+                    },
+                },
+                AUDIO: {
+                    theme:
+                        "https://s3-us-west-2.amazonaws.com/s.cdpn.io/155629/theme.mp3",
+                    engine:
+                        "https://s3-us-west-2.amazonaws.com/s.cdpn.io/155629/engine.wav",
+                    honk: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/155629/honk.wav",
+                    beep: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/155629/beep.wav",
+                },
+            }
+        </script>
+    </body>
+</html>
